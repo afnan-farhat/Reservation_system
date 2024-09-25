@@ -178,6 +178,8 @@ public class ClientView {
         }
     }
 
+    //Seat with button 
+    
     private static void createSeatSelectionFrame() {
         JFrame seatFrame = new JFrame("Select Your Seat");
         seatFrame.setSize(600, 400);
@@ -226,4 +228,60 @@ public class ClientView {
 
         seatFrame.setVisible(true);
     }
+    
+//    //Seats with images 
+//    private static void createSeatSelectionFrame() {
+//        JFrame seatFrame = new JFrame("Select Your Seat");
+//        seatFrame.setSize(600, 400);
+//        seatFrame.setLayout(new GridLayout(5, 6)); // 5 rows and 6 seats per row (example layout)
+//
+//        // Simulated seat availability (true = available, false = unavailable)
+//        boolean[][] seatsAvailability = {
+//            {true, true, false, true, false, true},
+//            {true, false, false, true, true, true},
+//            {true, true, true, true, false, false},
+//            {false, false, true, true, true, true},
+//            {true, true, true, false, false, true}
+//        };
+//
+//        // Load the original images for available and unavailable seats
+//        ImageIcon availableIcon = new ImageIcon("C:\\Users\\Afnan\\Documents\\NetBeansProjects\\CPIT305\\ReservationSystem\\src\\reservationsystem\\availabe.jpg");
+//        ImageIcon unavailableIcon = new ImageIcon("C:\\Users\\Afnan\\Documents\\NetBeansProjects\\CPIT305\\ReservationSystem\\src\\reservationsystem\\unavailabe.jpg");
+//
+//        // Desired size for the buttons and icons
+//        int buttonWidth = 100; // Set your desired width
+//        int buttonHeight = 100; // Set your desired height
+//
+//        // Scale the images to the desired size
+//        Image scaledAvailableImage = availableIcon.getImage().getScaledInstance(buttonWidth, buttonHeight, Image.SCALE_SMOOTH);
+//        Image scaledUnavailableImage = unavailableIcon.getImage().getScaledInstance(buttonWidth, buttonHeight, Image.SCALE_SMOOTH);
+//
+//        // Create new ImageIcons with the scaled images
+//        availableIcon = new ImageIcon(scaledAvailableImage);
+//        unavailableIcon = new ImageIcon(scaledUnavailableImage);
+//
+//        // Create seat buttons based on availability
+//        for (int row = 0; row < seatsAvailability.length; row++) {
+//            for (int col = 0; col < seatsAvailability[row].length; col++) {
+//                JButton seatButton = new JButton("Seat " + (row + 1) + (char) ('A' + col));
+//                if (seatsAvailability[row][col]) {
+//                    seatButton.setIcon(availableIcon); // Set the available seat image
+//                    seatButton.setPreferredSize(new Dimension(buttonWidth, buttonHeight)); // Set button size
+//                    seatButton.addActionListener(new ActionListener() {
+//                        public void actionPerformed(ActionEvent e) {
+//                            JOptionPane.showMessageDialog(seatFrame, "Booking successful\nYou reserved " + seatButton.getText());
+//                            seatFrame.dispose(); // Close seat selection frame after booking
+//                        }
+//                    });
+//                } else {
+//                    seatButton.setIcon(unavailableIcon); // Set the unavailable seat image
+//                    seatButton.setEnabled(false); // Disable unavailable seats
+//                }
+//                seatFrame.add(seatButton);
+//            }
+//        }
+//
+//        seatFrame.setVisible(true);
+//    }
+
 }
